@@ -1,7 +1,8 @@
-# Junø
+# Source
 
 
-![c11](https://user-images.githubusercontent.com/79812965/131373443-5ff0d9f6-2e2a-41bd-8347-22ac4983e625.jpg)
+
+![c11](https://static.wixstatic.com/media/80368b_b2c7b9f0d8614798bd9df0111903155a~mv2.png/v1/fill/w_624,h_108,al_c,q_85,usm_0.66_1.00_0.01/source%20logo%20final%20hrzn.webp)
 
 ❗️For issue disclosure, check out [SECURITY.md](./SECURITY.md) ❗️
 
@@ -72,7 +73,7 @@ and to provide utility in the deployment and execution of smart contracts.
 
 
 
-![c22](https://user-images.githubusercontent.com/79812965/131373499-81549b6c-6ab6-49fa-9d2f-4f7b79f74509.jpg)
+![c22](https://static.wixstatic.com/media/80368b_6d278c8c8ffa4c07b91419c4532c608a~mv2.png/v1/fill/w_179,h_233,al_c,q_85,usm_0.66_1.00_0.01/source%20icon.webp)
 
 
 
@@ -170,6 +171,14 @@ SOURCE MAX SUPPLY (185.5 Million)
 After year 12 the inflation reward schedule ends. 
 Network incentives would primarily come from smart contract usage and regular tx fees generated on the network.
 
+
+
+
+
+
+
+
+
 **Source** is a blockchain built using Cosmos SDK and Tendermint and created with [Starport](https://github.com/tendermint/starport).
 
 ## Get started
@@ -177,15 +186,17 @@ Network incentives would primarily come from smart contract usage and regular tx
 If you have [Docker](https://www.docker.com/) installed, then you can run a local node with a single command.
 
 ```bash
-STAKE_TOKEN=usourcex UNSAFE_CORS=true docker-compose up
+docker-compose up
 ```
 
 ## Learn more
 
-- [Source](https://sourcechain.com)
-- [Starport](https://github.com/tendermint/starport)
+- [Source](https://sourceprotocol.io)
+- [Ignite](https://github.com/tendermint/starport)
 - [Cosmos SDK documentation](https://docs.cosmos.network)
 - [Cosmos SDK Tutorials](https://tutorials.cosmos.network)
-- [Telegram](https://t.me/SourceNetwork)
-- [Discord](https://discord.gg/QcWPfK4gJ2)
+- [Telegram](https://t.me/sourceprotocol)
+- [Discord](https://discord.io/SourceProtocol)
+
+
 
