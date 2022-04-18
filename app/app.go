@@ -598,7 +598,7 @@ func New(
 		panic(err)
 	}
 
-	if upgradeInfo.Name == "moneta" && !app.UpgradeKeeper.IsSkipHeight(upgradeInfo.Height) {
+	if upgradeInfo.Name == "sourcebeta" && !app.UpgradeKeeper.IsSkipHeight(upgradeInfo.Height) {
 		storeUpgrades := store.StoreUpgrades{
 			Added: []string{authz.ModuleName, feegrant.ModuleName, wasm.ModuleName},
 		}
@@ -751,12 +751,12 @@ func (app *App) RegisterTendermintService(clientCtx client.Context) {
 
 // RegisterUpgradeHandlers returns upgrade handlers
 func (app *App) RegisterUpgradeHandlers(cfg module.Configurator) {
-	app.UpgradeKeeper.SetUpgradeHandler("lupercalia", func(ctx sdk.Context, plan upgradetypes.Plan, vm module.VersionMap) (module.VersionMap, error) {
+	app.UpgradeKeeper.SetUpgradeHandler("origin", func(ctx sdk.Context, plan upgradetypes.Plan, vm module.VersionMap) (module.VersionMap, error) {
 		// force an update of validator min commission
-		// we already did this for moneta
+		// we already did this for sourcebeta
 		// but validators could have snuck in changes in the
 		// interim
-		// and via state sync to post-moneta
+		// and via state sync to post-sourcebeta
 		validators := app.StakingKeeper.GetAllValidators(ctx)
 		// hard code this because we don't want
 		// a) a fork or
