@@ -1,0 +1,12 @@
+vue/node_modules
+vue/dist
+secret.yml
+cosmoshub3.json
+exchanges.json
+source_out.json
+bin
+.vscode
+
+# emacs editor config
+\#*\#
+.\#*
