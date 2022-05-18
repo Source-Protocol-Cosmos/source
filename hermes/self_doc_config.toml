@@ -1,9 +1,11 @@
+
 # The global section has parameters that apply globally to the relayer operation.
 [global]
 
 # Specify the verbosity for the relayer logging output. Default: 'info'
 # Valid options are 'error', 'warn', 'info', 'debug', 'trace'.
 log_level = 'info'
+
 
 # Specify the mode to be used by the relayer. [Required]
 [mode]
@@ -29,13 +31,13 @@ misbehaviour = true
 [mode.connections]
 
 # Whether or not to enable the connection workers for handshake completion. [Required]
-enabled = false
+enabled = true
 
 # Specify the channels mode.
 [mode.channels]
 
 # Whether or not to enable the channel workers for handshake completion. [Required]
-enabled = false
+enabled = true
 
 # Specify the packets mode.
 [mode.packets]
@@ -94,18 +96,15 @@ host = '127.0.0.1'
 port = 3001
 
 
-####################################################### END OF GLOBAL CONFIGURATION #######################################################
-
-
 # A chains section includes parameters related to a chain and the full node to which
 # the relayer can send transactions and queries.
 [[chains]]
 
 # Specify the chain ID. Required
-id = 'uni-2'
+id = 'ibc-0'
 
 # Specify the RPC address and port where the chain RPC server listens on. Required
-rpc_addr = 'https://rpc.uni.juno.deuslabs.fi:443/'
+rpc_addr = 'http://127.0.0.1:26657'
 
 # Specify the GRPC address and port where the chain GRPC server listens on. Required
 grpc_addr = 'http://127.0.0.1:9090'
