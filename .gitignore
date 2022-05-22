@@ -10,3 +10,5 @@ bin
 # emacs editor config
 \#*\#
 .\#*
+
+hermes/keys/
