@@ -43,7 +43,7 @@ fi
 
 echo "--------------- CREATING HERMES CONNECTION -------------------"
 
-CONNECTION_OUTPUT=$(hermes -c hermes/${CHAIN_NAME}_config.toml create connection --client-a ${CLIENT_ONE_ID} --client-b ${CLIENT_TWO_ID} sourcechain-testnet)
+CONNECTION_OUTPUT=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml create connection --client-a ${CLIENT_ONE_ID} --client-b ${CLIENT_TWO_ID} sourcechain-testnet)
 
 echo "--------------- CONNECTION CREATED SUCCESSFULLY -------------------"
 echo $CONNECTION_OUTPUT

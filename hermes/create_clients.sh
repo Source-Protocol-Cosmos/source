@@ -42,11 +42,11 @@ echo "--------------- CREATING HERMES CLIENTS -------------------"
 
 echo "CREATING CLIENT DEST_CHAIN: SOURCE SOURCE_CHAIN:${CHAIN_NAME}"
 
-CLIENT_ONE_OUTPUT=$(hermes -c hermes/${CHAIN_NAME}_config.toml tx raw create-client sourcechain-testnet $NETWORK_NAME) 
+CLIENT_ONE_OUTPUT=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml tx raw create-client sourcechain-testnet $NETWORK_NAME) 
 
 echo "CREATING SECOND CLIENT DEST_CHAIN: ${CHAIN_NAME} SOURCE_CHAIN: SOURCE"
 
-CLIENT_TWO_OUTPUT=$(hermes -c hermes/${CHAIN_NAME}_config.toml tx raw create-client $NETWORK_NAME sourcechain-testnet) 
+CLIENT_TWO_OUTPUT=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml tx raw create-client $NETWORK_NAME sourcechain-testnet) 
 
 echo "--------------- CLIENTS CREATED SUCCESSFULLY -------------------"
 echo $CLIENT_ONE_OUTPUT
