@@ -54,10 +54,17 @@ port = 3001
 # - https://rpc.uni.junomint.com:443/ 
 # - https://api.uni.junomint.com:443/
 # - https://uni-api.blockpane.com/ # RPC and LCD
+#         {
+#           "address": "35.243.205.230:9090",
+#           "provider": "strangelove"
+#         },
+#         {
+#           "address": "grpc-juno-ia.notional.ventures:443",
+#           "provider": "Notional"
 
 id = 'uni-2'
 rpc_addr = 'https://rpc.uni.juno.deuslabs.fi:443'
-grpc_addr = 'https://grpc.uni.deuslabs.com:443'
+grpc_addr = 'https://grpc-juno-ia.notional.ventures:443'
 websocket_addr = 'wss://rpc.uni.juno.deuslabs.fi:443/websocket'
 rpc_timeout = '10s'
 account_prefix = 'juno'
