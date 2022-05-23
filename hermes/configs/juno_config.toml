@@ -54,13 +54,11 @@ port = 3001
 # - https://rpc.uni.junomint.com:443/ 
 # - https://api.uni.junomint.com:443/
 # - https://uni-api.blockpane.com/ # RPC and LCD
-#         {
-#           "address": "35.243.205.230:9090",
+#   "address": "35.243.205.230:9090",
 #           "provider": "strangelove"
-#         },
 #         {
-#           "address": "grpc-juno-ia.notional.ventures:443",
-#           "provider": "Notional"
+# "address": "grpc-juno-ia.notional.ventures:443",
+# "provider": "Notional"
 
 id = 'uni-2'
 rpc_addr = 'https://rpc.uni.juno.deuslabs.fi:443'

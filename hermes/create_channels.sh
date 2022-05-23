@@ -44,7 +44,3 @@ CHANNEL_OUTPUT=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml create chann
 
 echo "--------------- CHANNEL CREATED SUCCESSFULLY -------------------"
 echo $CHANNEL_OUTPUT
-
-#07-tendermint-7
-#07-tendermint-757
-#connection-5
