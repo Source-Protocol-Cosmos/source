@@ -2,7 +2,7 @@
 
 set -e
 
-usage() { echo "Usage: $0 [-c <chain>] [-n <network_name>]" 1>&2; exit 1; }
+usage() { echo "Usage: $0 [-c chain] [-n network_name]" 1>&2; exit 1; }
 
 while getopts ":c:n:" o; do
     case "${o}" in

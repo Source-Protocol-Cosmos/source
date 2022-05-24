@@ -2,7 +2,7 @@
 
 set -e
 
-usage() { echo "Usage: $0 [-c <chain>] [-s <client_source_chain_id>] [-d <client_second_chain_id>] [-a <amount>] " 1>&2; exit 1; }
+usage() { echo "Usage: $0 [-c <chain>] [-s client_source_chain_id] [-d client_second_chain_id] [-a amount] " 1>&2; exit 1; }
 
 
 if [ "$1" = "" ]
@@ -13,11 +13,6 @@ fi
 if [ "$2" = "" ]
 then
   echo "No source client id provided."
-  exit
-fi
-if [ "$3" = "" ]
-then
-  echo "No destination client id provided."
   exit
 fi
 if [ "$3" = "" ]
