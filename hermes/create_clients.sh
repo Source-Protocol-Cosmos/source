@@ -2,27 +2,14 @@
 
 set -e
 
-usage() { echo "Usage: $0 [-c chain] [-n network_name]" 1>&2; exit 1; }
+usage() { echo "Usage: $0 -c <chain> -n <network_name>" 1>&2; exit 1; }
 
 while getopts ":c:n:" o; do
     case "${o}" in
         c)
             c=${OPTARG}
              ((c == "juno" || c == "osmosis" || c == "cosmos" )) || usage
-            case $c in
-                juno)
-                    CHAIN_NAME=$c
-                    ;;
-                osmosis)      
-                    CHAIN_NAME=$c
-                    ;;
-                cosmos)      
-                    CHAIN_NAME=$c
-                    ;;
-                *)
-                    usage
-                    ;;
-            esac
+            CHAIN_NAME=$c
             ;;
         n)
           NETWORK_NAME=${OPTARG}

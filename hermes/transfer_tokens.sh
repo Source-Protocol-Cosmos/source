@@ -2,7 +2,7 @@
 
 set -e
 
-usage() { echo "Usage: $0 [-c <chain>] [-s client_source_chain_id] [-d client_second_chain_id] [-a amount] " 1>&2; exit 1; }
+usage() { echo "Usage: $0 <chain> <source_chain_id> <destination_chain_id> <amount> " 1>&2; exit 1; }
 
 
 if [ "$1" = "" ]
@@ -12,12 +12,12 @@ then
 fi
 if [ "$2" = "" ]
 then
-  echo "No source client id provided."
+  echo "No source chain id provided."
   exit
 fi
 if [ "$3" = "" ]
 then
-  echo "No destination client id provided."
+  echo "No destination chain id provided."
   exit
 fi
 if [ "$4" = "" ]
@@ -45,11 +45,11 @@ CHAIN_DENOM=$6
 
 
 
-echo "--------------- CREATING HERMES CONNECTION -------------------"
+echo "--------------- INITIATION TRANSFER TOKENS -------------------"
 
 TRANSFER_TOKENS_OUTPUT=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml tx raw ft-transfer ${DEST_CHAIN_ID} ${SOURCE_CHAIN_ID} transfer ${CHANNEL_ID} ${AMOUNT} -o 1000 -n 1 -d ${CHAIN_DENOM})
 
-echo "--------------- CONNECTION CREATED SUCCESSFULLY -------------------"
+echo "--------------- TRANSACTION EXECUTED SUCCESSFULLY -------------------"
 echo $TRANSFER_TOKENS_OUTPUT
 
 #07-tendermint-7
