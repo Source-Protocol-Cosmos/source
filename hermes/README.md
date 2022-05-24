@@ -1,5 +1,12 @@
 # Hermes relayer scripts
 
+### Useful links
+
+ * https://hermes.informal.systems/index.html
+ * [Clients](https://hermes.informal.systems/commands/path-setup/clients.html)
+ * [Connections](https://hermes.informal.systems/commands/path-setup/connections.html)
+ * [Channels](https://hermes.informal.systems/commands/path-setup/channels.html)
+
 * For all scripts you will need to provide the name of the blockchain config you would like to make an operation with (apart from the source-chain network). The available options are all in the configs folder.
 
 * All of the scripts are meant to be executed from root folder.
