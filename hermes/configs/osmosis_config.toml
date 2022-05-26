@@ -1,0 +1,84 @@
+[global]
+
+log_level = 'info'
+
+[mode]
+
+[mode.clients]
+
+enabled = true
+refresh = true
+misbehaviour = true
+
+[mode.connections]
+
+enabled = false
+
+[mode.channels]
+
+enabled = false
+
+[mode.packets]
+
+enabled = true
+clear_interval = 100
+clear_on_start = true
+tx_confirmation = true
+
+[rest]
+
+enabled = true
+host = '127.0.0.1'
+port = 3000
+
+[telemetry]
+
+enabled = true
+host = '127.0.0.1'
+port = 3001
+
+
+####################################################### END OF GLOBAL CONFIGURATION #######################################################
+
+[[chains]]
+
+id = 'osmo-test-4'
+rpc_addr = 'https://testnet-rpc.osmosis.zone:443'
+grpc_addr = 'https://grpc.osmo-test.ccvalidators.com:443'
+websocket_addr = 'wss://testnet-rpc.osmosis.zone:443/websocket'
+rpc_timeout = '10s'
+account_prefix = 'osmo'
+key_name = 'ok1'
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 400000
+gas_price = { price = 0.001, denom = 'uosmo' }
+gas_adjustment = 1.0
+max_msg_num = 30
+max_tx_size = 150000
+clock_drift = '5s'
+max_block_time = '30s'
+trusting_period = '1days'
+trust_threshold = { numerator = '1', denominator = '3' }
+memo_prefix = ''
+
+[[chains]]
+id = 'sourcechain-testnet'
+rpc_addr = 'http://164.92.98.17:26657'
+grpc_addr = 'http://164.92.98.17:9090'
+websocket_addr = 'ws://164.92.98.17:26657/websocket'
+rpc_timeout = '10s'
+account_prefix = 'source'
+key_name = 'sk2'
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 400000
+gas_price = { price = 0.001, denom = 'usource' }
+gas_adjustment = 0.1
+max_msg_num = 30
+max_tx_size = 2097152
+clock_drift = '5s'
+max_block_time = '30s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+# address_type = { derivation = 'cosmos' }
