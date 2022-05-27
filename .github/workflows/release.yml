@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Docker compose
-        run: STAKE_TOKEN="usourcex" docker-compose up -d
+        run: STAKE_TOKEN="usource" docker-compose up -d
       - name: Copy binary
         run: docker cp source_node_1:/usr/bin/sourced ./sourced
       - name: Get release

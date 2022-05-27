@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Docker compose
-        run: STAKE_TOKEN="usourcex" docker-compose up -d
+        run: STAKE_TOKEN="usource" docker-compose up -d
       - name: Checkout
         uses: actions/checkout@v2
         with:
