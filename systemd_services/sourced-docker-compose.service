@@ -1,0 +1,20 @@
+Description=sourced docker compose daemon
+Requires=docker.service
+After=network-online.target
+
+[Service]
+RemainAfterExit=yes
+WorkingDirectory=/home/first_user/source
+User=first_user
+ExecStart=docker compose up
+ExecStop=docker compose down
+StandardOutput=file:/var/log/sourced-docker-compose/digitaloceand.log
+StandardError=file:/var/log/sourced-docker-compose/digitaloceand_error.log
+TimeoutStartSec=0
+Restart=on-failure
+StartLimitIntervalSec=60
+StartLimitBurst=3
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
