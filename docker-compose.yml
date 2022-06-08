@@ -12,9 +12,9 @@ services:
     expose:
       - 1317 # rest
       - 26657 # rpc
+      - 9090 # gRPC
     ports:
       - 26656:26656 # p2p
-      - 9090:9090 # gRPC
     environment:
       - GAS_LIMIT=${GAS_LIMIT:-100000000}
       - STAKE_TOKEN=${STAKE_TOKEN:-ustake}
@@ -26,6 +26,7 @@ services:
     ports:
       - 1317:1317 # rest
       - 26657:26657 # rpc
+      - 9090:9090 # gRPC
     volumes:
       - ./nginx/config:/etc/nginx
       - /etc/letsencrypt:/etc/letsencrypt
