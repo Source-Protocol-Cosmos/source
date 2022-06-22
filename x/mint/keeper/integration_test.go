@@ -3,16 +3,16 @@ package keeper_test
 import (
 	"encoding/json"
 
-	"github.com/tendermint/starport/starport/pkg/cosmoscmd"
+	"github.com/ignite-hq/cli/ignite/pkg/cosmoscmd"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
-	sourceapp "github.com/Source-Protocol-Cosmos/source/app"
+	sourceapp "github.com/Source-Protocol-Cosmos/source/v7/app"
 	"github.com/cosmos/cosmos-sdk/simapp"
 
-	"github.com/Source-Protocol-Cosmos/source/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v7/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

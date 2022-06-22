@@ -1,9 +1,9 @@
 syntax = "proto3";
-package SourceProtocolCosmos.source.mint;
+package source.mint;
 
 import "gogoproto/gogo.proto";
 import "google/api/annotations.proto";
-import "mint/mint.proto";
+import "source/mint/mint.proto";
 
 option go_package = "github.com/Source-Protocol-Cosmos/source/x/mint/types";
 

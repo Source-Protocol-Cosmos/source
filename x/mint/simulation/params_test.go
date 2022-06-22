@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/Source-Protocol-Cosmos/source/x/mint/simulation"
+	"github.com/Source-Protocol-Cosmos/source/v7/x/mint/simulation"
 )
 
 func TestParamChangest(t *testing.T) {
@@ -31,5 +31,4 @@ func TestParamChangest(t *testing.T) {
 		require.Equal(t, expected[i].simValue, p.SimValue()(r))
 		require.Equal(t, expected[i].subspace, p.Subspace())
 	}
-
 }

@@ -1,5 +1,5 @@
 syntax = "proto3";
-package SourceProtocolCosmos.source.mint;
+package source.mint;
 
 option go_package = "github.com/Source-Protocol-Cosmos/source/x/mint/types";
 

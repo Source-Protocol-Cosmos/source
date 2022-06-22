@@ -4,14 +4,14 @@ import (
 	"time"
 
 	"github.com/cosmos/cosmos-sdk/simapp"
-	"github.com/tendermint/starport/starport/pkg/cosmoscmd"
+	"github.com/ignite-hq/cli/ignite/pkg/cosmoscmd"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 	tmdb "github.com/tendermint/tm-db"
 
-	"github.com/Source-Protocol-Cosmos/source/app"
+	"github.com/Source-Protocol-Cosmos/source/v7/app"
 )
 
 // New creates application instance with in-memory database and disabled logging.

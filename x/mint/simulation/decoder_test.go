@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/ignite-hq/cli/ignite/pkg/cosmoscmd"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/starport/starport/pkg/cosmoscmd"
 
-	"github.com/Source-Protocol-Cosmos/source/app"
-	"github.com/Source-Protocol-Cosmos/source/x/mint/simulation"
-	"github.com/Source-Protocol-Cosmos/source/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v7/app"
+	"github.com/Source-Protocol-Cosmos/source/v7/x/mint/simulation"
+	"github.com/Source-Protocol-Cosmos/source/v7/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/kv"
 )

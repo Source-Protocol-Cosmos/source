@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/Source-Protocol-Cosmos/source/app"
+	"github.com/Source-Protocol-Cosmos/source/v7/app"
 	"github.com/cosmos/cosmos-sdk/client"
+	"github.com/ignite-hq/cli/ignite/pkg/cosmoscmd"
 	"github.com/spf13/cobra"
-	"github.com/tendermint/starport/starport/pkg/cosmoscmd"
 
 	"github.com/CosmWasm/wasmd/x/wasm"
 	wasmcli "github.com/CosmWasm/wasmd/x/wasm/client/cli"
