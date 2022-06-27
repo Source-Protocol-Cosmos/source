@@ -18,19 +18,12 @@ If it is something that can be handled by a param change, discuss it on Discord 
 
 For a bug that is non-sensitive and/or operational in nature rather than a critical vulnerability, please add it as a GitHub issue.
 
-If it is not triaged in a couple of days, feel free to tag `@the-frey` or `@jakehartnell`.
+If it is not triaged in a couple of days, feel free to tag `@SourceNexxus`.
 
 ## Critical bug or security issue 💥
 
-If you're here because you're trying to figure out how to notify us of a security issue, go to [Discord](https://discord.gg/wHdzjS5vXx), and alert the core engineers:
+If you're here because you're trying to figure out how to notify us of a security issue, go to [Discord](https://discord.com/invite/zj8xxUCeZQ), and alert the core engineers:
 
-
-- Jake (Meow) `Meow Stargaze ✨🔭#1736`
-- Dimi `dimi 🦙#2998`
-- Alex (the-frey) `the-frey#8626`
-- Ben2x4 `Ben2x4#4071`
-- Jacob `jacobgadikian#9883`
-- Giansalex `giansalex#1825`
 
 Please avoid opening public issues on GitHub that contain information about a potential security vulnerability as this makes it difficult to reduce the impact and harm of valid security issues.
 
