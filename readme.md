@@ -9,9 +9,6 @@
 **Source** is a decentralized, permissionless, and censorship resistant layer 1 proof-of-stake blockchain built in the [Cosmos Zone](https://cosmos.network/) ecosystem.
 
 
-![c22](https://static.wixstatic.com/media/80368b_6d278c8c8ffa4c07b91419c4532c608a~mv2.png/v1/fill/w_179,h_233,al_c,q_85,usm_0.66_1.00_0.01/source%20icon.webp)
-
-
 **Tokenomics** 
 
 ⚪️ **Ticker**: SOURCE
@@ -36,6 +33,8 @@ Network incentives would primarily come from smart contract usage and regular tx
 
 
 **Source** is a blockchain built using Cosmos SDK and Ignite (formerly Tendermint) and created with [Ignite CLI](https://ignite.com/cli).
+
+![c22](https://static.wixstatic.com/media/80368b_6d278c8c8ffa4c07b91419c4532c608a~mv2.png/v1/fill/w_179,h_233,al_c,q_85,usm_0.66_1.00_0.01/source%20icon.webp)
 
 ## Get started
 
