@@ -22,15 +22,20 @@ then
 fi
 if [ "$4" = "" ]
 then
-  echo "No channel id provided."
+  echo "No source chain channel id provided."
   exit
 fi
 if [ "$5" = "" ]
 then
-  echo "No amount provided."
+  echo "No destiny chain channel id provided."
   exit
 fi
 if [ "$6" = "" ]
+then
+  echo "No amount provided."
+  exit
+fi
+if [ "$7" = "" ]
 then
   echo "No coin denomination provided."
   exit
@@ -39,18 +44,24 @@ fi
 CHAIN_NAME=$1
 SOURCE_CHAIN_ID=$2
 DEST_CHAIN_ID=$3
-CHANNEL_ID=$4
-AMOUNT=$5
-CHAIN_DENOM=$6
+SRC_CHANNEL_ID=$4
+DEST_CHANNEL_ID=$5
+AMOUNT=$6
+CHAIN_DENOM=$7
 
 
 
 echo "--------------- INITIATION TRANSFER TOKENS -------------------"
 
-TRANSFER_TOKENS_OUTPUT=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml tx raw ft-transfer ${DEST_CHAIN_ID} ${SOURCE_CHAIN_ID} transfer ${CHANNEL_ID} ${AMOUNT} -o 1000 -n 1 -d ${CHAIN_DENOM})
+TRANSFER_TOKENS_OUTPUT=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml tx raw ft-transfer ${DEST_CHAIN_ID} ${SOURCE_CHAIN_ID} transfer ${SRC_CHANNEL_ID} ${AMOUNT} -o 1000 -n 1 -d ${CHAIN_DENOM})
+TRANSFER_TOKENS_RCV=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml tx raw packet-recv ${DEST_CHAIN_ID} ${SOURCE_CHAIN_ID} transfer ${SRC_CHANNEL_ID})
+TRANSFER_TOKENS_ACK=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml tx raw packet-ack ${SOURCE_CHAIN_ID} ${DEST_CHAIN_ID} transfer ${DEST_CHANNEL_ID})
+
 
 echo "--------------- TRANSACTION EXECUTED SUCCESSFULLY -------------------"
 echo $TRANSFER_TOKENS_OUTPUT
+echo $TRANSFER_TOKENS_RCV
+echo $TRANSFER_TOKENS_ACK
 
 #07-tendermint-7
 #07-tendermint-757

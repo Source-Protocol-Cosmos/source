@@ -29,7 +29,7 @@ misbehaviour = true
 [mode.connections]
 
 # Whether or not to enable the connection workers for handshake completion. [Required]
-enabled = false
+enabled = true
 
 # Specify the channels mode.
 [mode.channels]
@@ -75,7 +75,7 @@ host = '127.0.0.1'
 
 # Specify the port over which the built-in HTTP server will serve the restful API
 # requests. Default: 3000
-port = 3000
+port = 3004
 
 
 # The telemetry section defines parameters for Hermes' built-in telemetry capabilities.
@@ -91,7 +91,7 @@ host = '127.0.0.1'
 
 # Specify the port over which the built-in HTTP server will serve the metrics gathered
 # by the telemetry service. Default: 3001
-port = 3001
+port = 3003
 
 
 ####################################################### END OF GLOBAL CONFIGURATION #######################################################
@@ -130,7 +130,7 @@ account_prefix = 'cosmos'
 # Specify the name of the private key to use for signing transactions. Required
 # See the Adding Keys chapter for more information about managing signing keys:
 #   https://hermes.informal.systems/commands/keys/index.html#adding-keys
-key_name = 'gk1'
+key_name = 'pc2'
 
 # Specify the address type which determines:
 # 1) address derivation;
@@ -223,6 +223,12 @@ memo_prefix = ''
 # channel with port ID 'transfer' and channel ID 'channel-0', as well as on
 # all ICA channels.
 #
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['ica*', '*'],
+  ['transfer', 'channel-473'],
+]
 # [chains.packet_filter]
 # policy = 'allow'
 # list = [
@@ -238,12 +244,12 @@ memo_prefix = ''
 
 [[chains]]
 id = 'sourcechain-testnet'
-rpc_addr = 'http://164.92.98.17:26657'
-grpc_addr = 'http://164.92.98.17:9090'
-websocket_addr = 'ws://164.92.98.17:26657/websocket'
+rpc_addr = 'https://testnet.sourceprotocol.io:26657'
+grpc_addr = 'https://testnet.sourceprotocol.io:9090'
+websocket_addr = 'ws://testnet.sourceprotocol.io:26658/websocket'
 rpc_timeout = '10s'
 account_prefix = 'source'
-key_name = 'sk2'
+key_name = 'ps1'
 store_prefix = 'ibc'
 default_gas = 100000
 max_gas = 400000
@@ -256,3 +262,9 @@ max_block_time = '30s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
 # address_type = { derivation = 'cosmos' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['ica*', '*'],
+  ['transfer', 'channel-19'],
+]

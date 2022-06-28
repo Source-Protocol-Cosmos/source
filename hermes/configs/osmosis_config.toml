@@ -1,6 +1,6 @@
 [global]
 
-log_level = 'info'
+log_level = 'trace'
 
 [mode]
 
@@ -44,11 +44,11 @@ port = 3001
 
 id = 'osmo-test-4'
 rpc_addr = 'https://testnet-rpc.osmosis.zone:443'
-grpc_addr = 'https://grpc.osmo-test.ccvalidators.com:443'
+grpc_addr = 'http://grpc-osmosis-ia.notional.ventures:443'
 websocket_addr = 'wss://testnet-rpc.osmosis.zone:443/websocket'
 rpc_timeout = '10s'
 account_prefix = 'osmo'
-key_name = 'ok1'
+key_name = 'po3'
 store_prefix = 'ibc'
 default_gas = 100000
 max_gas = 400000
@@ -64,12 +64,12 @@ memo_prefix = ''
 
 [[chains]]
 id = 'sourcechain-testnet'
-rpc_addr = 'http://164.92.98.17:26657'
-grpc_addr = 'http://164.92.98.17:9090'
-websocket_addr = 'ws://164.92.98.17:26657/websocket'
+rpc_addr = 'https://testnet.sourceprotocol.io:26657'
+grpc_addr = 'https://testnet.sourceprotocol.io:9090'
+websocket_addr = 'ws://testnet.sourceprotocol.io:26658/websocket'
 rpc_timeout = '10s'
 account_prefix = 'source'
-key_name = 'sk2'
+key_name = 'ps1'
 store_prefix = 'ibc'
 default_gas = 100000
 max_gas = 400000

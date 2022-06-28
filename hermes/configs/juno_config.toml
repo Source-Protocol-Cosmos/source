@@ -12,11 +12,11 @@ misbehaviour = true
 
 [mode.connections]
 
-enabled = false
+enabled = true
 
 [mode.channels]
 
-enabled = false
+enabled = true
 
 [mode.packets]
 
@@ -60,17 +60,18 @@ port = 3001
 # "address": "grpc-juno-ia.notional.ventures:443",
 # "provider": "Notional"
 
-id = 'uni-2'
-rpc_addr = 'https://rpc.uni.juno.deuslabs.fi:443'
-grpc_addr = 'https://grpc-juno-ia.notional.ventures:443'
+id = 'uni-3'
+rpc_addr = 'https://rpc.uni.junonetwork.io:443'
+grpc_addr = 'https://grpc.juno.giansalex.dev:443'
+#grpc_addr = 'https://grpc-juno-ia.notional.ventures:443'
 websocket_addr = 'wss://rpc.uni.juno.deuslabs.fi:443/websocket'
 rpc_timeout = '10s'
 account_prefix = 'juno'
-key_name = 'jk2'
+key_name = 'pj4'
 store_prefix = 'ibc'
 default_gas = 100000
-max_gas = 400000
-gas_price = { price = 0.001, denom = 'uosmo' }
+max_gas = 700000
+gas_price = { price = 0.001, denom = 'ujunox' }
 gas_adjustment = 1.0
 max_msg_num = 30
 max_tx_size = 150000
@@ -79,18 +80,24 @@ max_block_time = '30s'
 trusting_period = '1days'
 trust_threshold = { numerator = '1', denominator = '3' }
 memo_prefix = ''
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['ica*', '*'],
+  ['transfer', 'channel-14'],
+]
 
 [[chains]]
 id = 'sourcechain-testnet'
-rpc_addr = 'http://164.92.98.17:26657'
-grpc_addr = 'http://164.92.98.17:9090'
-websocket_addr = 'ws://164.92.98.17:26657/websocket'
+rpc_addr = 'https://testnet.sourceprotocol.io:26657'
+grpc_addr = 'https://testnet.sourceprotocol.io:9090'
+websocket_addr = 'ws://testnet.sourceprotocol.io:26658/websocket'
 rpc_timeout = '10s'
 account_prefix = 'source'
-key_name = 'sk2'
+key_name = 'ps1'
 store_prefix = 'ibc'
 default_gas = 100000
-max_gas = 400000
+max_gas = 700000
 gas_price = { price = 0.001, denom = 'usource' }
 gas_adjustment = 0.1
 max_msg_num = 30
@@ -100,3 +107,9 @@ max_block_time = '30s'
 trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
 # address_type = { derivation = 'cosmos' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['ica*', '*'],
+  ['transfer', 'channel-18'],
+]
