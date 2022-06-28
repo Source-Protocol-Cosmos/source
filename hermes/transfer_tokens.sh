@@ -54,6 +54,11 @@ CHAIN_DENOM=$7
 echo "--------------- INITIATION TRANSFER TOKENS -------------------"
 
 TRANSFER_TOKENS_OUTPUT=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml tx raw ft-transfer ${DEST_CHAIN_ID} ${SOURCE_CHAIN_ID} transfer ${SRC_CHANNEL_ID} ${AMOUNT} -o 1000 -n 1 -d ${CHAIN_DENOM})
+#********************************* IMPORTANT ************************************************
+#The next two lines are responsible for completing the receive and acknowledge messages between the blockchains involved. 
+#These are necessary to complete the transaction. Since this is a task performed by the relayer, 
+#they are not mandatory if there is a relayer running at the time of the transfer.
+#******************************************************************************************
 TRANSFER_TOKENS_RCV=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml tx raw packet-recv ${DEST_CHAIN_ID} ${SOURCE_CHAIN_ID} transfer ${SRC_CHANNEL_ID})
 TRANSFER_TOKENS_ACK=$(hermes -c hermes/configs/${CHAIN_NAME}_config.toml tx raw packet-ack ${SOURCE_CHAIN_ID} ${DEST_CHAIN_ID} transfer ${DEST_CHANNEL_ID})
 
