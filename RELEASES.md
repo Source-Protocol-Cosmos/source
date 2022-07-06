@@ -4,7 +4,7 @@ The `#validators-private` channel on discord will be used for all communications
 
 **The core team will endeavour to always make sure there is 48-72 hours notice of an impending upgrade, unless there is no alternative.**
 
-Most of our validator communications is done on the [Source Discord](https://discord.gg/Source). You should join, and change your server name to `nick | validator-name`, then ask a mod for permission to see the private validator channels.
+Most of our validator communications is done on the [Source Discord](https://discord.com/invite/zj8xxUCeZQ). You should join, and change your server name to `name | validator-name`, then ask a mod for permission to see the private validator channels.
 
 ## Release versioning
 
@@ -42,4 +42,4 @@ There are two further considerations:
 
 The team will be putting together instructions that will be kept up-to-date for syncing without using a backup.
 
-Note that pre-Lupercalia (`< v3.0.0`) is effectively a different chain, as the old-style cosmoshub upgrade path was used, meaning there is a disjoint of one block.
+
