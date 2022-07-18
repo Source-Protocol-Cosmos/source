@@ -18,7 +18,7 @@ import (
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 	tmdb "github.com/tendermint/tm-db"
 
-	"github.com/Source-Protocol-Cosmos/source/v7/app"
+	"github.com/Source-Protocol-Cosmos/source/v2/app"
 )
 
 type (

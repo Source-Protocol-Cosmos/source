@@ -9,10 +9,10 @@ import (
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
-	sourceapp "github.com/Source-Protocol-Cosmos/source/v7/app"
+	sourceapp "github.com/Source-Protocol-Cosmos/source/v2/app"
 	"github.com/cosmos/cosmos-sdk/simapp"
 
-	"github.com/Source-Protocol-Cosmos/source/v7/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

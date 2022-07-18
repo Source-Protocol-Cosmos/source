@@ -6,7 +6,7 @@ package testutil
 import (
 	"testing"
 
-	"github.com/Source-Protocol-Cosmos/source/v7/testutil/network"
+	"github.com/Source-Protocol-Cosmos/source/v2/testutil/network"
 
 	"github.com/stretchr/testify/suite"
 )

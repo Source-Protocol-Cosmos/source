@@ -1,16 +1,41 @@
 accounts:
-  - name: alice
-    coins: ["20000token", "200000000stake"]
-  - name: bob
-    coins: ["10000token", "100000000stake"]
+  - name: dev-fund
+    coins: ["27700000000000usource"]
+  - name: community-fund
+    coins: ["50000000000000usource"]
 validator:
-  name: alice
-  staked: "100000000stake"
+  name: dev-fund
+  staked: "1000000000usource"
 client:
   vuex:
     path: "vue/src/store"
   openapi:
     path: "docs/static/openapi.yml"
+genesis:
+  chain_id: "sourcechain-testnet"
+  app_state:
+    supply: 
+      params:
+        denom: "usource"
+        amount: "77000000000000"
+    staking:
+      params:
+        bond_denom: "usource"
+    mint:
+      params:
+        mint_denom: "usource"
+        blocks_per_year: "6311520"
+    crisis:
+      constant_fee:
+        denom: "usource"
+        amount: "1000"
+    gov: 
+      deposit_params: 
+          max_deposit_period: "864000s"
+          min_deposit: 
+            - amount: "500000000"
+              denom: "usource"
 faucet:
-  name: bob
-  coins: ["5token", "100000stake"]
+  name: community-fund
+  coins: ["1000000000000usource"]
+  coins_max: ["50000000000000usource"]

@@ -7,9 +7,9 @@ import (
 	"github.com/ignite-hq/cli/ignite/pkg/cosmoscmd"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Source-Protocol-Cosmos/source/v7/app"
-	"github.com/Source-Protocol-Cosmos/source/v7/x/mint/simulation"
-	"github.com/Source-Protocol-Cosmos/source/v7/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v2/app"
+	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/simulation"
+	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/kv"
 )

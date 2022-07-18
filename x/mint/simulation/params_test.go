@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/Source-Protocol-Cosmos/source/v7/x/mint/simulation"
+	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/simulation"
 )
 
 func TestParamChangest(t *testing.T) {

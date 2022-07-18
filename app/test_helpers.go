@@ -9,7 +9,7 @@ import (
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
-	// sourceapp "github.com/Source-Protocol-Cosmos/source/v7/app"
+	// sourceapp "github.com/Source-Protocol-Cosmos/source/v2/app"
 	"github.com/cosmos/cosmos-sdk/simapp"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"

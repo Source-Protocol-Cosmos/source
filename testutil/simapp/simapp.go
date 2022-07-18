@@ -11,7 +11,7 @@ import (
 	tmtypes "github.com/tendermint/tendermint/types"
 	tmdb "github.com/tendermint/tm-db"
 
-	"github.com/Source-Protocol-Cosmos/source/v7/app"
+	"github.com/Source-Protocol-Cosmos/source/v2/app"
 )
 
 // New creates application instance with in-memory database and disabled logging.
