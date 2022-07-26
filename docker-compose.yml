@@ -5,7 +5,7 @@ services:
       context: .
       args:
         - arch=${ARCH:-x86_64}
-    command: ./setup_and_run.sh source16g2rahf5846rxzp3fwlswy08fz8ccuwk03k57y
+    command: ./setup_and_run.sh source1z2pwal23rn7acdluxmj9345g2ndr9rsw4ukhyr
     volumes:
       - ./docker/.source:/root/.source
     hostname: node
