@@ -6,7 +6,10 @@ exchanges.json
 source_out.json
 bin
 .vscode
+nginx/certs
 
 # emacs editor config
 \#*\#
 .\#*
+
+hermes/keys/

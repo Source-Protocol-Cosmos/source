@@ -1,0 +1,13 @@
+Description=sourced daemon
+After=network-online.target
+[Service]
+User=first_user
+ExecStart=/home/first_user/go/bin/sourced start --home=/home/first_user/.source
+WorkingDirectory=/home/first_user/go/bin
+StandardOutput=file:/var/log/sourced/digitaloceand.log
+StandardError=file:/var/log/sourced/digitaloceand_error.log
+Restart=always
+RestartSec=3
+LimitNOFILE=4096
+[Install]
+WantedBy=multi-user.target
