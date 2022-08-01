@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  hermes:
+    build:
+      context: .
+      dockerfile: hermes.Dockerfile
+    container_name: hermes_container
+    image: hermes_img
+    volumes: [ ./:/hermes ]
+    env_file:
+      - ./.env
+  clients-updater:
+    depends_on:
+      - hermes
+    container_name: clients_updater_container
+    build:
+      context: .
+      dockerfile: clients_updater.Dockerfile
+    volumes_from:
+      - hermes
+    env_file:
+      - ./.env
