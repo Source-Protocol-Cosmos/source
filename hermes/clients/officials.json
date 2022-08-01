@@ -25,7 +25,8 @@
     "sourceConnection": "connection-83",
     "cpConnection": "connection-757",
     "sourceChannel": "channel-63",
-    "cpChannel": "channel-552"
+    "cpChannel": "channel-552",
+    "cpToken": "ibc/783663256FAD11DAF9A3F63A99E184F669067F532520C6A3AB14E31BFC484913"
   },
   {
     "sourceChain": "sourcechain-testnet",
