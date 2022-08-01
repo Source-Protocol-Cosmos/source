@@ -1,15 +1,12 @@
 # Source
 
-
-
 ![c11](https://static.wixstatic.com/media/80368b_b2c7b9f0d8614798bd9df0111903155a~mv2.png/v1/fill/w_624,h_108,al_c,q_85,usm_0.66_1.00_0.01/source%20logo%20final%20hrzn.webp)
 
 ❗️For issue disclosure, check out [SECURITY.md](./SECURITY.md) ❗️
 
 **Source** is a decentralized, permissionless, and censorship resistant layer 1 proof-of-stake blockchain built in the [Cosmos Zone](https://cosmos.network/) ecosystem.
 
-
-**Tokenomics** 
+**Tokenomics**
 
 ⚪️ **Ticker**: SOURCE
 
@@ -19,18 +16,14 @@
 
 ⚪️ **Supply**: TBD
 
-⚪️ **Rewards**: Fixed yearly reward schedule 
-
+⚪️ **Rewards**: Fixed yearly reward schedule
 
 ✅ Circulating supply at genesis TBD $SOURCE (TBD)
 
 ✅ Max supply (After year 12): TBD $SOURCE (TBD)
 
-
-
-After year 12 the inflation reward schedule ends. 
+After year 12 the inflation reward schedule ends.
 Network incentives would primarily come from smart contract usage and regular tx fees generated on the network.
-
 
 **Source** is a blockchain built using Cosmos SDK and Ignite (formerly Tendermint) and created with [Ignite CLI](https://ignite.com/cli).
 
@@ -44,8 +37,22 @@ Alternatively,
 
 If you have [Docker](https://www.docker.com/) installed, then you can run a **local node** with a single command.
 
+We recommend that you easily run your own hermes relayer to verify ibc transactions. You only need to add your mnemonic in [mnemonic](./hermes/mnemonic) file
+
 ```bash
-docker-compose up
+# Set environments with mnemonic to run hermes
+cp hermes/.env.example hermes/.env
+echo "<YOUR MNENOMIC>" > hermes/mnemonic
+
+# Start docker with node and hermes
+bash ./run_full_node.sh
+```
+
+You can also skip hermes and run just the node
+
+```bash
+# Start docker with node
+bash ./run_validator_only.sh
 ```
 
 ## Learn more
@@ -56,6 +63,3 @@ docker-compose up
 - [Cosmos SDK Tutorials](https://tutorials.cosmos.network)
 - [Telegram](https://t.me/sourceprotocol)
 - [Discord](https://discord.io/SourceProtocol)
-
-
-
