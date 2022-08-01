@@ -1,0 +1,46 @@
+[
+  {
+    "sourceChain": "sourcechain-testnet",
+    "cpChain": "osmo-test-4",
+    "sourceRpc": "https://testnet.sourceprotocol.io:26657",
+    "cpRpc": "https://testnet-rpc.osmosis.zone:443",
+    "sourceAddress": "source1phaxpevm5wecex2jyaqty2a4v02qj7qm3ngcj3",
+    "sourceClientId": "07-tendermint-150",
+    "cpClientId": "07-tendermint-2232",
+    "sourceConnection": "connection-82",
+    "cpConnection": "connection-1756",
+    "sourceChannel": "channel-62",
+    "cpChannel": "channel-389",
+    "sourceToken": "ibc/0D38F53FEB75839410DD2670BA49080D0520CDDA18C19EFBFABF529E7F6DC1AF",
+    "cpToken": "ibc/5F182D0AC70455136ECAE7303ABD85A2E1CF5197DE3BB4C418F253F0050BABB3"
+  },
+  {
+    "sourceChain": "sourcechain-testnet",
+    "cpChain": "theta-testnet-001",
+    "sourceRpc": "https://testnet.sourceprotocol.io:26657",
+    "cpRpc": "https://rpc.state-sync-01.theta-testnet.polypore.xyz:443",
+    "sourceAddress": "source1phaxpevm5wecex2jyaqty2a4v02qj7qm3ngcj3",
+    "sourceClientId": "07-tendermint-151",
+    "cpClientId": "07-tendermint-908",
+    "sourceConnection": "connection-83",
+    "cpConnection": "connection-757",
+    "sourceChannel": "channel-63",
+    "cpChannel": "channel-552"
+  },
+  {
+    "sourceChain": "sourcechain-testnet",
+    "cpChain": "uni-3",
+    "sourceRpc": "https://testnet.sourceprotocol.io:26657",
+    "cpRpc": "https://rpc.uni.junonetwork.io:443",
+    "sourceAddress": "source1phaxpevm5wecex2jyaqty2a4v02qj7qm3ngcj3",
+    "cpAddress": "juno1phaxpevm5wecex2jyaqty2a4v02qj7qmpjja9n",
+    "sourceClientId": "07-tendermint-152",
+    "cpClientId": "07-tendermint-264",
+    "sourceConnection": "connection-84",
+    "cpConnection": "connection-214",
+    "sourceChannel": "channel-64",
+    "cpChannel": "channel-176",
+    "sourceToken": "ibc/929ACDD609936BC3B74C0E04E0725FEEF69A833F41FC4D7C69E1C9BD05247A03",
+    "cpToken": "ibc/F74E39E7CFE457C45AE9271839D4EF6FA30C12C98CF16C95C2E7C5B2A2BF9A90"
+  }
+]

@@ -13,3 +13,6 @@ nginx/certs
 .\#*
 
 hermes/keys/
+hermes/node_modules
+hermes/mnemonic.txt
+.env

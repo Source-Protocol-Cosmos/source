@@ -1,0 +1,2 @@
+# Runs every 10min
+*/10 * * * * node /hermes/scripts/updaterClients.js --configPath $CONFIG_PATH >>/var/log/clients-updater.log 2>&1
