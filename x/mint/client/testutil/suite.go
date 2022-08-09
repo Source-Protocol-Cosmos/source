@@ -7,11 +7,12 @@ import (
 	"github.com/stretchr/testify/suite"
 	tmcli "github.com/tendermint/tendermint/libs/cli"
 
-	"github.com/Source-Protocol-Cosmos/source/testutil/network"
-	"github.com/Source-Protocol-Cosmos/source/x/mint/client/cli"
-	minttypes "github.com/Source-Protocol-Cosmos/source/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/client/cli"
+	minttypes "github.com/Source-Protocol-Cosmos/source/v2/x/mint/types"
+
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"
+	"github.com/cosmos/cosmos-sdk/testutil/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 
