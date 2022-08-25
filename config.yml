@@ -1,6 +1,7 @@
 accounts:
   - name: dev-fund
     coins: ["27700000000000usource"]
+    mnemonic: "satoshi settle call cherry kick engine master shield identify silk casual mixture execute element parrot donate mesh reopen fix trust head task festival version"
   - name: community-fund
     coins: ["50000000000000usource"]
 validator:
@@ -12,9 +13,9 @@ client:
   openapi:
     path: "docs/static/openapi.yml"
 genesis:
-  chain_id: "sourcechain-testnet"
+  chain_id: "sourcechain-testnet-1"
   app_state:
-    supply: 
+    supply:
       params:
         denom: "usource"
         amount: "77000000000000"
@@ -29,12 +30,12 @@ genesis:
       constant_fee:
         denom: "usource"
         amount: "1000"
-    gov: 
-      deposit_params: 
-          max_deposit_period: "864000s"
-          min_deposit: 
-            - amount: "500000000"
-              denom: "usource"
+    gov:
+      deposit_params:
+        max_deposit_period: "864000s"
+        min_deposit:
+          - amount: "500000000"
+            denom: "usource"
 faucet:
   name: community-fund
   coins: ["1000000000000usource"]
