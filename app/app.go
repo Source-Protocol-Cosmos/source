@@ -662,7 +662,7 @@ func New(
 		panic(err)
 	}
 
-	if upgradeInfo.Name == "multiverse" && !app.UpgradeKeeper.IsSkipHeight(upgradeInfo.Height) {
+	if upgradeInfo.Name == "origin" && !app.UpgradeKeeper.IsSkipHeight(upgradeInfo.Height) {
 		storeUpgrades := store.StoreUpgrades{
 			Added: []string{icacontrollertypes.StoreKey, icahosttypes.StoreKey},
 		}

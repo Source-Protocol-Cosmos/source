@@ -12,7 +12,7 @@ client:
   openapi:
     path: "docs/static/openapi.yml"
 genesis:
-  chain_id: "sourcechain-testnet"
+  chain_id: "sourcetestnet-1"
   app_state:
     supply: 
       params:
