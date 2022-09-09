@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/Source-Protocol-Cosmos/source/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 )

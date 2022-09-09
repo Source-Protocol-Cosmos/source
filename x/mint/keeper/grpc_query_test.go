@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/suite"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
-	"github.com/Source-Protocol-Cosmos/source/app"
-	"github.com/Source-Protocol-Cosmos/source/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v2/app"
+	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

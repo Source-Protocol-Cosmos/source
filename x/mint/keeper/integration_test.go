@@ -3,16 +3,15 @@ package keeper_test
 import (
 	"encoding/json"
 
-	"github.com/tendermint/starport/starport/pkg/cosmoscmd"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
-	sourceapp "github.com/Source-Protocol-Cosmos/source/app"
+	sourceapp "github.com/Source-Protocol-Cosmos/source/v2/app"
 	"github.com/cosmos/cosmos-sdk/simapp"
 
-	"github.com/Source-Protocol-Cosmos/source/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 
@@ -51,7 +50,7 @@ func setup(isCheckTx bool) *sourceapp.App {
 
 func genApp(withGenesis bool, invCheckPeriod uint) (*sourceapp.App, sourceapp.GenesisState) {
 	db := dbm.NewMemDB()
-	encCdc := cosmoscmd.MakeEncodingConfig(sourceapp.ModuleBasics)
+	encCdc := sourceapp.MakeEncodingConfig()
 	app := sourceapp.New(
 		log.NewNopLogger(),
 		db,
@@ -61,12 +60,14 @@ func genApp(withGenesis bool, invCheckPeriod uint) (*sourceapp.App, sourceapp.Ge
 		simapp.DefaultNodeHome,
 		invCheckPeriod,
 		encCdc,
-		simapp.EmptyAppOptions{})
+		sourceapp.GetEnabledProposals(),
+		simapp.EmptyAppOptions{},
+		sourceapp.GetWasmOpts(simapp.EmptyAppOptions{}),
+	)
 
-	originalApp := app.(*sourceapp.App)
 	if withGenesis {
-		return originalApp, sourceapp.NewDefaultGenesisState(encCdc.Marshaler)
+		return app, sourceapp.NewDefaultGenesisState(encCdc.Marshaler)
 	}
 
-	return originalApp, sourceapp.GenesisState{}
+	return app, sourceapp.GenesisState{}
 }
