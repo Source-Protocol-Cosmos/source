@@ -8,7 +8,7 @@ const (
 	// DefaultSourceInstanceCost is initially set the same as in wasmd
 	DefaultSourceInstanceCost uint64 = 60_000
 	// DefaultSourceCompileCost set to a large number for testing
-	DefaultSourceCompileCost uint64 = 100
+	DefaultSourceCompileCost uint64 = 3
 )
 
 // SourceGasRegisterConfig is defaults plus a custom compile amount
