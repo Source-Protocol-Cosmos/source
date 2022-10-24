@@ -15,7 +15,7 @@ jobs:
         run: docker cp source_node_1:/usr/bin/sourced ./sourced
       - name: Get release
         id: get_release
-        uses: bruceadams/get-release@v1.2.3
+        uses: bruceadams/get-release@v1.3.0
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - name: Upload release binary
