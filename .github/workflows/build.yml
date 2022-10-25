@@ -1,3 +1,4 @@
+---
 on: [push, pull_request]
 name: every commit
 jobs:
@@ -26,7 +27,7 @@ jobs:
     - name: Test
       run: go test ./...
 
-# Use --check or --exit-code when available (Go 1.19?)
+# Use --check or --exit-code when available (Go 1.18?)
 # https://github.com/golang/go/issues/27005
   tidy:
     runs-on: ubuntu-latest

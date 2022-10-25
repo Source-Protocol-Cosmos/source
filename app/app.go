@@ -109,6 +109,7 @@ import (
 	icatypes "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts/types"
 
 	encparams "github.com/Source-Protocol-Cosmos/source/v2/app/params"
+	upgrades "github.com/Source-Protocol-Cosmos/source/v2/app/upgrades"
 )
 
 const (
@@ -455,7 +456,7 @@ func New(
 
 	// The last arguments can contain custom message handlers, and custom query handlers,
 	// if we want to allow any custom callbacks
-	supportedFeatures := "iterator,staking,stargate"
+	supportedFeatures := "iterator,staking,stargate,cosmwasm_1_1"
 	app.wasmKeeper = wasm.NewKeeper(
 		appCodec,
 		keys[wasm.StoreKey],
@@ -662,7 +663,7 @@ func New(
 		panic(err)
 	}
 
-	if upgradeInfo.Name == "origin" && !app.UpgradeKeeper.IsSkipHeight(upgradeInfo.Height) {
+	if upgradeInfo.Name == "multiverse" && !app.UpgradeKeeper.IsSkipHeight(upgradeInfo.Height) {
 		storeUpgrades := store.StoreUpgrades{
 			Added: []string{icacontrollertypes.StoreKey, icahosttypes.StoreKey},
 		}
@@ -839,7 +840,9 @@ func (app *App) RegisterTendermintService(clientCtx client.Context) {
 
 // RegisterUpgradeHandlers returns upgrade handlers
 
-func (app *App) RegisterUpgradeHandlers(cfg module.Configurator) {}
+func (app *App) RegisterUpgradeHandlers(cfg module.Configurator) {
+	app.UpgradeKeeper.SetUpgradeHandler("v11", upgrades.CreateV11UpgradeHandler(app.mm, cfg, &app.ICAHostKeeper))
+}
 
 // GetMaccPerms returns a copy of the module account permissions
 func GetMaccPerms() map[string][]string {
