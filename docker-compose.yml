@@ -1,3 +1,4 @@
+---
 version: "3"
 services:
   node:
@@ -16,7 +17,7 @@ services:
     ports:
       - 26656:26656 # p2p
     environment:
-      - GAS_LIMIT=${GAS_LIMIT:-100000000}
+      - GAS_LIMIT=${GAS_LIMIT:-10000000}
       - STAKE_TOKEN=${STAKE_TOKEN:-usource}
   reverse:
     container_name: reverse
