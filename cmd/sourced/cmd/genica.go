@@ -1,13 +1,14 @@
-package main
+package cmd
 
 import (
 	"encoding/json"
 	"fmt"
+
 	"github.com/spf13/cobra"
 
-	icacontrollertypes "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts/controller/types"
-	icahosttypes "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts/host/types"
-	icatypes "github.com/cosmos/ibc-go/v3/modules/apps/27-interchain-accounts/types"
+	icacontrollertypes "github.com/cosmos/ibc-go/v4/modules/apps/27-interchain-accounts/controller/types"
+	icahosttypes "github.com/cosmos/ibc-go/v4/modules/apps/27-interchain-accounts/host/types"
+	icatypes "github.com/cosmos/ibc-go/v4/modules/apps/27-interchain-accounts/types"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
@@ -41,34 +42,10 @@ func AddGenesisIcaCmd(defaultNodeHome string) *cobra.Command {
 			controllerGenesisState.Params = icacontrollertypes.Params{}
 
 			hostGenesisState := icatypes.DefaultHostGenesis()
-			// add the messages we want
+			// add the messages we want (from old upgrade handler)
 			hostGenesisState.Params = icahosttypes.Params{
-				HostEnabled: true,
-				AllowMessages: []string{
-					"/cosmos.bank.v1beta1.MsgSend",
-					// uncomment this after v11 ships
-					// "/cosmos.bank.v1beta1.MsgMultiSend",
-					"/cosmos.staking.v1beta1.MsgDelegate",
-					"/cosmos.staking.v1beta1.MsgUndelegate",
-					"/cosmos.staking.v1beta1.MsgBeginRedelegate",
-					"/cosmos.staking.v1beta1.MsgCreateValidator",
-					"/cosmos.staking.v1beta1.MsgEditValidator",
-					"/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward",
-					"/cosmos.distribution.v1beta1.MsgSetWithdrawAddress",
-					"/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission",
-					"/cosmos.distribution.v1beta1.MsgFundCommunityPool",
-					"/cosmos.gov.v1beta1.MsgVote",
-					"/cosmos.gov.v1beta1.MsgVoteWeighted",
-					"/cosmos.authz.v1beta1.MsgExec",
-					"/cosmos.authz.v1beta1.MsgGrant",
-					"/cosmos.authz.v1beta1.MsgRevoke",
-					"/cosmwasm.wasm.v1.MsgStoreCode",
-					"/cosmwasm.wasm.v1.MsgInstantiateContract",
-					// uncomment this after v11 ships
-					// "/cosmwasm.wasm.v1.InstantiateContract2",
-					"/cosmwasm.wasm.v1.MsgExecuteContract",
-					"/ibc.applications.transfer.v1.MsgTransfer",
-				},
+				HostEnabled:   true,
+				AllowMessages: []string{"*"},
 			}
 
 			newIcaGenState := icatypes.NewGenesisState(controllerGenesisState, hostGenesisState)

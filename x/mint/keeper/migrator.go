@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	v2 "github.com/Source-Protocol-Cosmos/source/v2/x/mint/migrations/v2"
+	v2 "github.com/Source-Protocol-Cosmos/source/v3/x/mint/migrations/v2"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

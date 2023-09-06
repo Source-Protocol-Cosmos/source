@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/Source-Protocol-Cosmos/source/v2/app/params"
+	"github.com/Source-Protocol-Cosmos/source/v3/app/params"
 
 	"github.com/cosmos/cosmos-sdk/std"
 )
