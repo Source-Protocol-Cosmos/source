@@ -3,7 +3,7 @@ module github.com/Source-Protocol-Cosmos/source/tests/interchaintest
 go 1.19
 
 require (
-	github.com/Source-Protocol-Cosmos/source/v13 v13.0.0
+	github.com/Source-Protocol-Cosmos/source/v3 v3.0.0
 	github.com/cosmos/cosmos-sdk v0.45.14
 	github.com/cosmos/ibc-go/v4 v4.3.0
 	github.com/strangelove-ventures/interchaintest/v4 v4.0.0-20230316161044-8d8c01f96b4a

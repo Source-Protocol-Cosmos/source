@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   title: Source network
-  version: v14
+  version: v3
 consumes:
   - application/json
 produces:

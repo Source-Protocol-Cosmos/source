@@ -62,8 +62,8 @@ github.com/CosmWasm/wasmd v0.30.0 h1:oUVz3TgO/+24JZQdoTOlOv+IK7N9hEa/s3M4eR9i4FQ
 github.com/CosmWasm/wasmd v0.30.0/go.mod h1:umLGeYyowAMMEdOYfDOf8jsDrQ75Qkm1+ogBXT/w01c=
 github.com/CosmWasm/wasmvm v1.1.1 h1:0xtdrmmsP9fibe+x42WcMkp5aQ738BICgcH3FNVLzm4=
 github.com/CosmWasm/wasmvm v1.1.1/go.mod h1:ei0xpvomwSdONsxDuONzV7bL1jSET1M8brEx0FCXc+A=
-github.com/Source-Protocol-Cosmos/source/v13 v13.0.0 h1:/1pikuWzkT9a3WN+o7JBgwvgzWFDF5cIpzJoXoHdHYo=
-github.com/Source-Protocol-Cosmos/source/v13 v13.0.0/go.mod h1:Woy1aY09yjO04m+9DQuNUOy10NTyLT0RcoysqfZGCyM=
+github.com/Source-Protocol-Cosmos/source/v3 v3.0.0 h1:/1pikuWzkT9a3WN+o7JBgwvgzWFDF5cIpzJoXoHdHYo=
+github.com/Source-Protocol-Cosmos/source/v3 v3.0.0/go.mod h1:Woy1aY09yjO04m+9DQuNUOy10NTyLT0RcoysqfZGCyM=
 github.com/DATA-DOG/go-sqlmock v1.3.3/go.mod h1:f/Ixk793poVmq4qj/V1dPUg2JEAKC73Q5eFN3EC/SaM=
 github.com/DataDog/datadog-go v3.2.0+incompatible/go.mod h1:LButxg5PwREeZtORoXG3tL4fMGNddJ+vMq1mwgfaqoQ=
 github.com/Microsoft/go-winio v0.6.0 h1:slsWYD/zyx7lCXoZVlvQrj0hPTM1HI4+v1sIda2yDvg=

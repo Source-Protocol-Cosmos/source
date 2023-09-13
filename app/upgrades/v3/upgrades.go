@@ -1,4 +1,4 @@
-package v14
+package v3
 
 import (
 	"fmt"
@@ -14,7 +14,7 @@ import (
 	globalfeetypes "github.com/cosmos/gaia/v9/x/globalfee/types"
 )
 
-func CreateV14UpgradeHandler(
+func Createv3UpgradeHandler(
 	mm *module.Manager,
 	cfg module.Configurator,
 	keepers *keepers.AppKeepers,

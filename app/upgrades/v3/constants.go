@@ -1,4 +1,4 @@
-package v14
+package v3
 
 import (
 	"github.com/Source-Protocol-Cosmos/source/v3/app/upgrades"
@@ -8,11 +8,11 @@ import (
 )
 
 // UpgradeName defines the on-chain upgrade name for the upgrade.
-const UpgradeName = "v14"
+const UpgradeName = "v3"
 
 var Upgrade = upgrades.Upgrade{
 	UpgradeName:          UpgradeName,
-	CreateUpgradeHandler: CreateV14UpgradeHandler,
+	CreateUpgradeHandler: Createv3UpgradeHandler,
 	StoreUpgrades: store.StoreUpgrades{
 		Added: []string{
 			globalfee.ModuleName,
