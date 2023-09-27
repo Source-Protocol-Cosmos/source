@@ -6,6 +6,7 @@
 
 **Documentation and Set Up tutorials can be found [HERE](https://docs.sourceprotocol.io/source-chain-documentation/introduction)**
 
+**v3.0.0 Now Available For Testnet!**
 
 **Source** is a decentralized, permissionless, and censorship resistant layer 1 proof-of-stake blockchain built in the [Cosmos Zone](https://cosmos.network/) ecosystem.
 
