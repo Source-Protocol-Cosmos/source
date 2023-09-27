@@ -2,7 +2,11 @@
 name: Build Docker Image on PR
 
 on:
-  pull_request:
+  push:
+    paths:
+      - "**docker**"
+      - "**.sh"
+      - "**.bash"
 
 env:
   REGISTRY: ghcr.io
@@ -19,7 +23,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Build without push
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           platforms: linux/amd64

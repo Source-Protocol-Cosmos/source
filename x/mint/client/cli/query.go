@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v3/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 )

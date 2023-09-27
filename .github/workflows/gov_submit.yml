@@ -3,10 +3,19 @@ name: Gov Contract CI - Submit Contract Prop
 
 on:
   pull_request:
+    paths:
+    - '**.go'
   push:
+    paths:
+    - '**.go'
     tags:
     branches:
       - 'main'
+
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   docker:
@@ -14,12 +23,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Docker compose
-        run: STAKE_TOKEN="usource" docker-compose up -d
+        run: STAKE_TOKEN="usourcex" TIMEOUT_COMMIT=500ms docker-compose up -d
       - name: Checkout
         uses: actions/checkout@v3
         with:
           repository: 'Source-Protocol-Cosmos/cw-unity-prop'
-          ref: 'v0.3.2'
+          ref: 'v0.3.4-alpha'
       - name: Test smart contract gov prop
         run: |
           chmod a+x ./scripts/submit_gov_ci.sh

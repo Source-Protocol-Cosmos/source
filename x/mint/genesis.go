@@ -1,8 +1,8 @@
 package mint
 
 import (
-	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/keeper"
-	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v3/x/mint/keeper"
+	"github.com/Source-Protocol-Cosmos/source/v3/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 

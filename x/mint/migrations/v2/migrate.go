@@ -1,7 +1,7 @@
 package v2
 
 import (
-	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v3/x/mint/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
@@ -13,11 +13,10 @@ const (
 // Migrate migrates the x/mint module state from the consensus version 1 to
 // version 2. Specifically, it take calculate target supply for the current phase
 func Migrate(
-	ctx sdk.Context,
+	_ sdk.Context,
 	store sdk.KVStore,
 	cdc codec.BinaryCodec,
 ) error {
-
 	// Get minter
 	var minter types.Minter
 	b := store.Get(types.MinterKey)

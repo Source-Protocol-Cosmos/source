@@ -8,7 +8,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 
-	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v3/x/mint/types"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 )
 
@@ -18,11 +18,11 @@ const (
 
 // ParamChanges defines the parameters that can be modified by param change proposals
 // on the simulation
-func ParamChanges(r *rand.Rand) []simtypes.ParamChange {
+func ParamChanges(_ *rand.Rand) []simtypes.ParamChange {
 	return []simtypes.ParamChange{
 		simulation.NewSimParamChange(types.ModuleName, keyBlocksPerYear,
 			func(r *rand.Rand) string {
-				return fmt.Sprintf("\"%s\"", GenBlocksPerYear(r))
+				return fmt.Sprintf("\"%d\"", GenBlocksPerYear(r))
 			},
 		),
 	}

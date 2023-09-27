@@ -8,15 +8,15 @@ import (
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
-	sourceapp "github.com/Source-Protocol-Cosmos/source/v2/app"
+	sourceapp "github.com/Source-Protocol-Cosmos/source/v3/app"
 	"github.com/cosmos/cosmos-sdk/simapp"
 
-	"github.com/Source-Protocol-Cosmos/source/v2/x/mint/types"
+	"github.com/Source-Protocol-Cosmos/source/v3/x/mint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 
 // returns context and an app with updated mint keeper
-func createTestApp(isCheckTx bool) (*sourceapp.App, sdk.Context) {
+func createTestApp(isCheckTx bool) (*sourceapp.App, sdk.Context) { //nolint:unparam
 	app := setup(isCheckTx)
 
 	ctx := app.BaseApp.NewContext(isCheckTx, tmproto.Header{})
