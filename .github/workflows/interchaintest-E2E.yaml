@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -73,7 +73,7 @@ jobs:
         id: go
 
       - name: checkout chain
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - run: make ictest-basic
         env:
@@ -90,7 +90,7 @@ jobs:
         id: go
 
       - name: checkout chain
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - run: make ictest-ibc
         env:
@@ -107,7 +107,7 @@ jobs:
         id: go
 
       - name: checkout chain
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - run: make ictest-upgrade
         env:

@@ -20,11 +20,11 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Docker compose
         run: STAKE_TOKEN="usourcex" TIMEOUT_COMMIT=500ms docker-compose up -d
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'Source-Protocol-Cosmos/cw-unity-prop'
           ref: 'v0.3.4-alpha'
